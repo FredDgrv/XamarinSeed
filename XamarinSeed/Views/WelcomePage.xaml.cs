@@ -9,6 +9,7 @@ namespace XamarinSeed
 	{
 		public WelcomePage ()
 		{
+			BindingContext = App.Instance.WelcomeVM;
 			InitializeComponent ();
 		}
 	}

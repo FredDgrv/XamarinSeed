@@ -16,8 +16,13 @@ namespace XamarinSeed
 		public const string MenuThirdItem = "ThirdItem";
 		public const string MenuSettingsItem = "Settings";
 
+		/// <summary>
+		/// Initialize the menu
+		/// </summary>
 		public void Initialize()
 		{
+			// helpful links to go further : https://www.syntaxismyui.com/xamarin-forms-masterdetail-page-navigation-recipe/
+
 			Label header = new Label
 			{
 				Text = "menu",
