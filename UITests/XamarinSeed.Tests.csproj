@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{AA753ED1-7617-40DC-B437-C0D47C980A7D}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>XamarinSeed.UITests</RootNamespace>
+    <RootNamespace>XamarinSeed.Tests</RootNamespace>
     <AssemblyName>XamarinSeed.UITests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
@@ -49,11 +49,15 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Tests.cs" />
-    <Compile Include="AppTests.cs" />
+    <Compile Include="PCL\AppTests.cs" />
+    <Compile Include="UI\AndroidAppTests.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UI\" />
+    <Folder Include="PCL\" />
   </ItemGroup>
 </Project>

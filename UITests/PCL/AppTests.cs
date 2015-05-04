@@ -6,14 +6,12 @@ namespace XamarinSeed.Tests
     [TestFixture]
     public class AppTests
     {
-        [SetUp]
-        public void BeforeEachTest()
-        {
-            App.Instance;
-        }
-
         [Test]
         public void Initialize()
+        {
+            App.Instance;
+            Assert.IsNotNull(App.Instance.Navigation);
+        }
     }
 }
 
