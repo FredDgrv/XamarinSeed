@@ -9,18 +9,18 @@ namespace XamarinSeed
 	{
 	    public event PropertyChangedEventHandler PropertyChanged;
 
-	    protected virtual void OnPropertyChanged (string propertyName)
+	    protected virtual void OnPropertyChanged(string propertyName)
 		{
 			PropertyChangedEventHandler handler = PropertyChanged;
 			if (handler != null) 
 			{
-				handler (this, new PropertyChangedEventArgs (propertyName));
+				handler (this, new PropertyChangedEventArgs(propertyName));
 			}
 	    }
 
-	    protected bool SetField<T> (ref T field, T value, [CallerMemberName] string propertyName = null)
+	    protected bool SetField<T>(ref T field, T value, [CallerMemberName] string propertyName = null)
 		{
-			if (EqualityComparer<T>.Default.Equals (field, value)) 
+			if (EqualityComparer<T>.Default.Equals(field, value)) 
 			{
 				return false;
 			}
