@@ -19,7 +19,8 @@ namespace XamarinSeed.Droid
 
 			global::Xamarin.Forms.Forms.Init (this, bundle);
 
-			LoadApplication (new App ());
+			LoadApplication (App.Instance);
+			SetPage(App.Instance.MainPage);
 		}
 	}
 }
