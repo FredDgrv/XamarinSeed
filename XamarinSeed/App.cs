@@ -12,7 +12,6 @@ namespace XamarinSeed
 		
 		private App() 
 		{
-			InitializeApp();
 		}
 		
 		public static App Instance
@@ -44,8 +43,10 @@ namespace XamarinSeed
 			try {
 				Logger.Info("App.GetMainPage");
 				WelcomeVM = new WelcomeViewModel();
-				Navigation = new NavigationPage(new WelcomePage());
-				MainPage = new MenuPage();				
+				Navigation = new NavigationPage(new WelcomePage());				
+                var mainPage = new MenuPage();
+                mainPage.Initialize();
+                MainPage = mainPage;
 			} catch (Exception e) {
 				throw e;
 			}
