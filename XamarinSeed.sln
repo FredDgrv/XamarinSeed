@@ -5,7 +5,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamarinSeed", "XamarinSeed\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamarinSeed.Droid", "Droid\XamarinSeed.Droid.csproj", "{A8390642-B19A-4481-8D76-2423F8473C82}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamarinSeed.Tests", "UITests\XamarinSeed.Tests.csproj", "{AA753ED1-7617-40DC-B437-C0D47C980A7D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamarinSeed.Tests", "Tests\XamarinSeed.Tests.csproj", "{AA753ED1-7617-40DC-B437-C0D47C980A7D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
