@@ -6,27 +6,41 @@ namespace XamarinSeed
 {
 	public class WelcomeViewModel
 	{
+        #region ctor
+
 		public WelcomeViewModel ()
 		{
+            Item = new Item
+            {
+                MyText = "I'm sleeping."
+            };
 		}
 
-		#region navigate welcome page
+        #endregion
 
-		private Command _navigateWelcomeToSignin;
-		public ICommand NavigateWelcomeToSignin
+        #region data
+
+        public Item Item { get; set; }
+
+        #endregion
+
+		#region commands
+
+		private Command _buttonClickedCommand;
+		public ICommand ButtonClickedCommand
 		{
 			get
 			{
-				if (_navigateWelcomeToSignin == null)
+				if (_buttonClickedCommand == null)
 				{
-					_navigateWelcomeToSignin = new Command(
+					_buttonClickedCommand = new Command(
 						(parameter) => 
 						{
-							// implement Xamarin.Auth if needed
+                            Item.MyText = "I'm moving! Yeah!";
 						}
 					);
 				}
-				return _navigateWelcomeToSignin;
+				return _buttonClickedCommand;
 			}
 		}
 

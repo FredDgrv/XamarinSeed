@@ -8,12 +8,21 @@ namespace XamarinSeed
 	{
 		#region singleton
 
+        /// <summary>
+        /// static member for singleton
+        /// </summary>
 		private static App instance;
 		
+        /// <summary>
+        /// singleton prevents any other class from instantiating
+        /// </summary>
 		private App() 
 		{
 		}
 		
+        /// <summary>
+        /// Gets the unique instance
+        /// </summary>
 		public static App Instance
 		{
 		  get 
@@ -26,23 +35,32 @@ namespace XamarinSeed
 		  }
 		}
 		
-		#endregion
+		#endregion 
 
 		#region properties
 
+        /// <summary>
+        /// NavigationPage manages the navigation and user-experience of a stack of other pages
+        /// </summary>
 		public NavigationPage Navigation { get; private set; }
 
-		public WelcomeViewModel WelcomeVM { get; private set; }
+        /// <summary>
+        /// WelcomeView datas and commands
+        /// </summary>
+		public WelcomeViewModel WelcomeViewModel { get; private set; }
 
 		#endregion
 
 		#region methods to initialize
 
+        /// <summary>
+        /// Initializes the app.
+        /// </summary>
 		public void InitializeApp ()
 		{	
 			try {
 				Logger.Info("App.GetMainPage");
-				WelcomeVM = new WelcomeViewModel();
+				WelcomeViewModel = new WelcomeViewModel();
 				Navigation = new NavigationPage(new WelcomePage());				
                 var mainPage = new MenuPage();
                 mainPage.Initialize();
